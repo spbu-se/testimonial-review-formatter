@@ -5,6 +5,8 @@
 в текстовом виде и в виде PDF. По [техническим причинам](http://www.math.spbu.ru/ru/mmeh/VKR/review_blackb.pdf)
 актуально для [СПбГУ](http://spbu.ru/).
 
+<!-- https://web.archive.org/web/20160528122545/http://www.math.spbu.ru/ru/mmeh/VKR/review_blackb.pdf -->
+
 Системные требования
 --------------------
 
