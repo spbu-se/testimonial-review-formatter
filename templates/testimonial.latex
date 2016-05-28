@@ -111,9 +111,8 @@ $endfor$
 
 $student.genitive$
 
-\vspace{5mm}\textbf{\textsf{\large $title$}}
+\vspace{3mm}\textbf{\textsf{\large $title$}}
 \end{center}
-\vspace{5mm}
 
 $for(include-before)$
 $include-before$
