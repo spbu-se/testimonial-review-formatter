@@ -73,6 +73,13 @@ $endif$
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+% http://tex.stackexchange.com/a/94702/70953
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
 $if(dir)$
 \ifxetex
   % load bidi as late as possible as it modifies e.g. graphicx
@@ -121,7 +128,9 @@ $endfor$
 
 ~
 \vfill
+\begin{absolutelynopagebreak}
 \noindent{}$reviewer.role$: $reviewer.title$\vspace{6mm}
 
 \noindent{}$reviewer.name$ \underline{\hspace{5cm}} \hfill <<\underline{\hspace{1cm}}>>\underline{\hspace{3cm}}20\underline{\hspace{0.5cm}}~г.
+\end{absolutelynopagebreak}
 \end{document}
