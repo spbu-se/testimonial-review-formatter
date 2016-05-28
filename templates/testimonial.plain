@@ -1,0 +1,15 @@
+$doctype$
+$student.genitive$
+$title$
+
+$for(include-before)$
+$include-before$
+$endfor$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+
+$reviewer.role$: $reviewer.title$
+
+$reviewer.name$ ________________    «____» ____________ 20____ г.

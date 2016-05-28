@@ -1,0 +1,127 @@
+\documentclass[$if(fontsize)$$fontsize$$else$12pt$endif$,$if(lang)$$babel-lang$,$endif$a4paper,$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+$if(fontfamily)$
+\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
+$endif$
+
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage{mmap}
+  \usepackage[T2A]{fontenc}
+  \usepackage[utf8]{inputenc}
+$if(euro)$
+  \usepackage{eurosym}
+$endif$
+\else % if luatex or xelatex
+  \usepackage{xunicode}
+
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+
+  \usepackage{xltxtra}
+  \defaultfontfeatures{Ligatures=TeX,Mapping=tex-text,Scale=MatchLowercase}
+
+  \def\MyRmFont#1{\expandafter#1
+    [Path=$if(here)$$here$/$endif$fonts/linux-libertine/,
+     BoldFont=LinLibertine_RZ,
+     ItalicFont=LinLibertine_RI,
+     BoldItalicFont=LinLibertine_RZI
+    ]{LinLibertine_DR}
+  }
+  \MyRmFont{\newfontfamily{\cyrillicfont}}
+  \MyRmFont{\setmainfont}
+  \MyRmFont{\setromanfont}
+
+  % TODO get rid of system font
+  \def\MySsFont#1{\expandafter#1
+    []{CMU Sans Serif}
+  }
+  \MySsFont{\setsansfont}
+  \MySsFont{\newfontfamily{\cyrillicfontsf}}
+
+  % TODO get rid of system font
+  \def\MyTtFont#1{\expandafter#1
+    [Mapping=tex-ansi]{CMU Typewriter Text}
+  }
+  \MyTtFont{\setsansfont}
+  \MyTtFont{\newfontfamily{\cyrillicfonttt}}
+\fi
+
+\usepackage[left=20mm,right=20mm,top=20mm,bottom=20mm,headsep=0pt]{geometry}
+\usepackage[unicode]{hyperref}
+
+$if(lang)$
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
+$if(babel-newcommands)$
+  $babel-newcommands$
+$endif$
+\else
+  \usepackage{polyglossia}
+  \setmainlanguage[$polyglossia-lang.options$]{$polyglossia-lang.name$}
+$for(polyglossia-otherlangs)$
+  \setotherlanguage[$polyglossia-otherlangs.options$]{$polyglossia-otherlangs.name$}
+$endfor$
+\fi
+$endif$
+
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+$if(dir)$
+\ifxetex
+  % load bidi as late as possible as it modifies e.g. graphicx
+  $if(latex-dir-rtl)$
+  \usepackage[RTLdocument]{bidi}
+  $else$
+  \usepackage{bidi}
+  $endif$
+\fi
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \TeXXeTstate=1
+  \newcommand{\RL}[1]{\beginR #1\endR}
+  \newcommand{\LR}[1]{\beginL #1\endL}
+  \newenvironment{RTL}{\beginR}{\endR}
+  \newenvironment{LTR}{\beginL}{\endL}
+\fi
+$endif$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+\textbf{\textsf{$doctype$}}
+
+$student.genitive$
+
+\vspace{5mm}\textbf{\textsf{\large $title$}}
+\end{center}
+\vspace{5mm}
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+\noindent
+$body$
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+~
+\vfill
+\noindent{}$reviewer.role$: $reviewer.title$\vspace{6mm}
+
+\noindent{}$reviewer.name$ \underline{\hspace{5cm}} \hfill <<\underline{\hspace{1cm}}>>\underline{\hspace{3cm}}20\underline{\hspace{0.5cm}}~г.
+\end{document}
