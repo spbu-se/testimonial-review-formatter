@@ -54,6 +54,7 @@ $endif$
 
 \usepackage[left=20mm,right=20mm,top=20mm,bottom=20mm,headsep=0pt]{geometry}
 \usepackage[unicode]{hyperref}
+\usepackage{longtable,booktabs}
 
 $if(lang)$
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
