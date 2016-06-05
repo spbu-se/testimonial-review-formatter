@@ -129,7 +129,9 @@ $endfor$
 ~
 \vfill
 \begin{absolutelynopagebreak}
-\noindent{}$reviewer.role$: $reviewer.title$\vspace{6mm}
+\noindent{}$reviewer.role$:
+
+\noindent{}$reviewer.title$\vspace{6mm}
 
 \noindent{}$reviewer.name$ \underline{\hspace{5cm}} \hfill <<\underline{\hspace{1cm}}>>\underline{\hspace{3cm}}20\underline{\hspace{0.5cm}}~г.
 \end{absolutelynopagebreak}
