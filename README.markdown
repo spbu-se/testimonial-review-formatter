@@ -10,9 +10,10 @@
 Системные требования
 --------------------
 
-* Pandoc
+* [Pandoc](http://pandoc.org/) --- текст пишется с использованием [Pandoc Markdown](http://pandoc.org/README.html#pandocs-markdown)
 * XeLaTeX
-* Установленные в систему шрифты CMU Sans Serif и CMU Typewriter Text
+* Установленные в систему шрифты CMU Sans Serif и CMU Typewriter Text,
+  которые можно взять, например, [здесь](https://fontlibrary.org/ru/search?query=CMU)
   (да, мы над этим работаем... или не работаем, присылайте идеи и патчи)
 
 Запуск
@@ -20,9 +21,10 @@
 
     <путь>/review-testimonial.sh <путь>/ваш_отзыв.markdown
 
-Для [приложенного примера](example-testimonial.markdown) --- 
+Для шаблонов [отзыва](example-testimonial.markdown) и, соответственно, [рецензии](example-review.markdown) ---
 
     <путь>/review-testimonial.sh example-testimonial.markdown
+    <путь>/review-testimonial.sh example-review.markdown
 
 Лицензия
 --------
