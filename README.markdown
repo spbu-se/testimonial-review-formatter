@@ -33,6 +33,8 @@
     <путь>/review-testimonial.sh example-testimonial.markdown
     <путь>/review-testimonial.sh example-review.markdown
 
+Наилучшее качество шрифтов достигается с использованием при печати PDF опции *Print as image*.
+
 Лицензия
 --------
 

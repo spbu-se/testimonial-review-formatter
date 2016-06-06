@@ -15,3 +15,4 @@ pandoc -t latex -o $tex --smart -V here=$here --template=${here}/templates/testi
 pandoc -t plain -o $txt --smart --template=${here}/templates/testimonial.plain $src
 
 xelatex -output-directory=$srcdir $tex
+xelatex -output-directory=$srcdir $tex

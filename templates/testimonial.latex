@@ -28,10 +28,10 @@ $endif$
 
   \def\MyRmFont#1{\expandafter#1
     [Path=$if(here)$$here$/$endif$fonts/linux-libertine/,
-     BoldFont=LinLibertine_RZ,
+     BoldFont=LinLibertine_RB,
      ItalicFont=LinLibertine_RI,
-     BoldItalicFont=LinLibertine_RZI
-    ]{LinLibertine_DR}
+     BoldItalicFont=LinLibertine_RBI % No cyrillic here!
+    ]{LinLibertine_R}
   }
   \MyRmFont{\newfontfamily{\cyrillicfont}}
   \MyRmFont{\setmainfont}
