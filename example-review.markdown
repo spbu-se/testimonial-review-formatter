@@ -1,4 +1,8 @@
 ---
+signature: signatures/signature.png
+date: 20 мая 2018 г.
+# fontsize: 10pt
+
 lang: ru
 title: Система вёрстки рецензий и отзывов с поддержкой различных бэкендов
 student:

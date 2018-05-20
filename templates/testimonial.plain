@@ -14,3 +14,4 @@ $endfor$
 $reviewer.role$:
 $reviewer.title$
 $reviewer.name$
+$date$
