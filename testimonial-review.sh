@@ -11,8 +11,8 @@ srcdir=${srcdir//\\/\/}
 tex=${src%.*}.tex
 txt=${src%.*}.txt
 
-pandoc -t latex -o $tex --smart -V here=$here --template=${here}/templates/testimonial.latex $src
-pandoc -t plain -o $txt --smart --template=${here}/templates/testimonial.plain $src
+pandoc -t latex -o $tex -V here=$here --template=${here}/templates/testimonial.latex $src
+pandoc -t plain -o $txt --template=${here}/templates/testimonial.plain $src
 
 xelatex -output-directory=$srcdir $tex
 xelatex -output-directory=$srcdir $tex
