@@ -37,9 +37,12 @@ $endif$
   \MyRmFont{\setmainfont}
   \MyRmFont{\setromanfont}
 
-  % TODO get rid of system font
   \def\MySsFont#1{\expandafter#1
-    []{CMU Sans Serif}
+    [Path=$if(here)$$here$/$endif$fonts/linux-libertine/,
+     BoldFont=LinBiolinum_RB,
+     ItalicFont=LinBiolinum_RI,
+     BoldItalicFont=LinBiolinum_K % No cyrillic here, and no bold italic at all!
+    ]{LinBiolinum_R}
   }
   \MySsFont{\setsansfont}
   \MySsFont{\newfontfamily{\cyrillicfontsf}}
