@@ -27,22 +27,22 @@ $endif$
   \defaultfontfeatures{Ligatures=TeX,Mapping=tex-text,Scale=MatchLowercase}
 
   \def\MyRmFont#1{\expandafter#1
-    [Path=$if(here)$$here$/$endif$fonts/linux-libertine/,
-     BoldFont=LinLibertine_RB,
-     ItalicFont=LinLibertine_RI,
-     BoldItalicFont=LinLibertine_RBI % No cyrillic here!
-    ]{LinLibertine_R}
+    [Path=$if(here)$$here$/$endif$fonts/oldstandard/,
+     BoldFont=OldStandard-Bold,
+     ItalicFont=OldStandard-Italic,
+     BoldItalicFont=OldStandard-Bold % no Bold Italic
+    ]{OldStandard-Regular}
   }
   \MyRmFont{\newfontfamily{\cyrillicfont}}
   \MyRmFont{\setmainfont}
   \MyRmFont{\setromanfont}
 
   \def\MySsFont#1{\expandafter#1
-    [Path=$if(here)$$here$/$endif$fonts/linux-libertine/,
-     BoldFont=LinBiolinum_RB,
-     ItalicFont=LinBiolinum_RI,
-     BoldItalicFont=LinBiolinum_K % No cyrillic here, and no bold italic at all!
-    ]{LinBiolinum_R}
+    [Path=$if(here)$$here$/$endif$fonts/open-sans/,
+     BoldFont=OpenSans-Bold,
+     ItalicFont=OpenSans-Italic,
+     BoldItalicFont=OpenSans-BoldItalic
+    ]{OpenSans-Regular}
   }
   \MySsFont{\setsansfont}
   \MySsFont{\newfontfamily{\cyrillicfontsf}}
