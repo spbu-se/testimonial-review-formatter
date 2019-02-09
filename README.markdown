@@ -14,12 +14,9 @@
 Системные требования
 --------------------
 
-* [Pandoc](http://pandoc.org/) --- текст пишется с использованием [Pandoc Markdown](http://pandoc.org/README.html#pandocs-markdown)
+* [Pandoc](http://pandoc.org/) — текст пишется с использованием [Pandoc Markdown](http://pandoc.org/README.html#pandocs-markdown)
 * XeLaTeX
 * Bash (у кого есть Git, у того найдётся и Bash)
-* Установленные в систему шрифты CMU Sans Serif и CMU Typewriter Text,
-  которые можно взять, например, [здесь](https://fontlibrary.org/ru/search?query=CMU)
-  (да, мы над этим работаем... или не работаем, присылайте идеи и патчи)
 
 Запуск
 ------
@@ -28,7 +25,7 @@
 
 После того, как сценарий отработает, Вы получите `<путь>/ваш_отзыв.txt` и `<путь>/ваш_отзыв.pdf`.
 
-Для шаблонов [отзыва](example-testimonial.markdown) и, соответственно, [рецензии](example-review.markdown) ---
+Для шаблонов [отзыва](example-testimonial.markdown) и, соответственно, [рецензии](example-review.markdown) —
 
     <путь>/review-testimonial.sh example-testimonial.markdown
     <путь>/review-testimonial.sh example-review.markdown

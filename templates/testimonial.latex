@@ -47,11 +47,15 @@ $endif$
   \MySsFont{\setsansfont}
   \MySsFont{\newfontfamily{\cyrillicfontsf}}
 
-  % TODO get rid of system font
+
   \def\MyTtFont#1{\expandafter#1
-    [Mapping=tex-ansi]{CMU Typewriter Text}
+    [Path=$if(here)$$here$/$endif$fonts/IBM_Plex_Mono/,
+     BoldFont=IBMPlexMono-Bold,
+     ItalicFont=IBMPlexMono-Italic,
+     BoldItalicFont=IBMPlexMono-BoldItalic
+    ]{IBMPlexMono-Regular}
   }
-  \MyTtFont{\setsansfont}
+  \MyTtFont{\setmonofont}
   \MyTtFont{\newfontfamily{\cyrillicfonttt}}
 \fi
 
