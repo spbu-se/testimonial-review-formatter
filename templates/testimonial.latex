@@ -59,7 +59,7 @@ $endif$
   \MyTtFont{\newfontfamily{\cyrillicfonttt}}
 \fi
 
-\usepackage[left=20mm,right=20mm,top=20mm,bottom=20mm,headsep=0pt]{geometry}
+\usepackage[left=25mm,right=10mm,top=20mm,bottom=20mm,headsep=0pt]{geometry}
 \usepackage[unicode]{hyperref}
 \usepackage{longtable,booktabs}
 \usepackage{xcolor}
@@ -113,6 +113,8 @@ $endif$
 $for(header-includes)$
 $header-includes$
 $endfor$
+
+\setlength{\parskip}{6pt}
 
 \begin{document}
 
