@@ -62,6 +62,10 @@ $endif$
 \usepackage[left=20mm,right=20mm,top=20mm,bottom=20mm,headsep=0pt]{geometry}
 \usepackage[unicode]{hyperref}
 \usepackage{longtable,booktabs}
+\usepackage{xcolor}
+
+\definecolor{SPbUTerracota}{HTML}{9F2D20}
+\definecolor{SPbUGrey}{HTML}{A8ADB4}
 
 $if(lang)$
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -115,11 +119,11 @@ $endfor$
 \thispagestyle{empty}
 
 \begin{center}
-\textbf{\textsf{$doctype$}}
+\textbf{\color{SPbUTerracota}\textsf{$doctype$}}
 
 $student.genitive$
 
-\vspace{3mm}\textbf{\textsf{\large $title$}}
+\vspace{3mm}\textbf{\color{SPbUTerracota}\textsf{\large $title$}}
 \end{center}
 
 $for(include-before)$
