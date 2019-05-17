@@ -11,6 +11,12 @@
 
 <!-- https://web.archive.org/web/20160528122545/http://www.math.spbu.ru/ru/mmeh/VKR/review_blackb.pdf -->
 
+Корпоративный Стиль
+--------------------
+
+При оформлении варианта PDF используются [шрифты](https://pr.spbu.ru/simvolika/firmennye-shrifty.html) и
+[цвета](https://pr.spbu.ru/simvolika/firmennye-tsveta.html) фирменного стиля™ СПбГУ.
+
 Системные требования
 --------------------
 
