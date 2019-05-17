@@ -114,7 +114,7 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-\setlength{\parskip}{6pt}
+\setlength{\parskip}{$if(parskip)$$parskip$$else$6pt$endif$}
 
 \begin{document}
 
