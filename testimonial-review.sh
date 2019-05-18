@@ -1,8 +1,12 @@
 #!/bin/bash
+set -ueo pipefail
 
 here=`dirname $0`
+
 # if your OS is sick
 here=${here//\\/\/}
+
+test $# -gt 0 ||  { echo -e "Missing input file.\nUsage:\n\t$0 <markdown-input-file>\n" ;  exit 0 ; }
 
 src=$1
 srcdir=`dirname $src`
