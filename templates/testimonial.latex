@@ -64,6 +64,9 @@ $endif$
 \usepackage{longtable,booktabs}
 \usepackage{xcolor}
 
+\usepackage{enumitem}
+\setlist{nolistsep}
+
 \definecolor{SPbUTerracota}{HTML}{9F2D20}
 \definecolor{SPbUGrey}{HTML}{A8ADB4}
 
