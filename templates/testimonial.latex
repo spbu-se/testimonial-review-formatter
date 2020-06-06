@@ -67,6 +67,8 @@ $endif$
 \usepackage{enumitem}
 \setlist{nolistsep}
 
+\usepackage{indentfirst}
+
 \definecolor{SPbUTerracota}{HTML}{9F2D20}
 \definecolor{SPbUGrey}{HTML}{A8ADB4}
 
@@ -135,7 +137,6 @@ $for(include-before)$
 $include-before$
 $endfor$
 
-\noindent
 $body$
 
 $for(include-after)$
