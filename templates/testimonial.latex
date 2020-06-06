@@ -1,4 +1,4 @@
-\documentclass[$if(fontsize)$$fontsize$$else$12pt$endif$,$if(lang)$$babel-lang$,$endif$a4paper,$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+\documentclass[$if(fontsize)$$fontsize$$else$12pt$endif$,$if(lang)$$babel-lang$,$endif$a4paper,$for(classoption)$$classoption$$sep$,$endfor$]{extarticle}
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $endif$
