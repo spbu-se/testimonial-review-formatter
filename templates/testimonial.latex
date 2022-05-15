@@ -80,7 +80,9 @@ $if(babel-newcommands)$
 $endif$
 \else
   \usepackage{polyglossia}
-  \setmainlanguage[$polyglossia-lang.options$]{$polyglossia-lang.name$}
+  $if(lang)$
+  \setmainlanguage{$babel-lang$}
+  $endif$
 $for(polyglossia-otherlangs)$
   \setotherlanguage[$polyglossia-otherlangs.options$]{$polyglossia-otherlangs.name$}
 $endfor$
