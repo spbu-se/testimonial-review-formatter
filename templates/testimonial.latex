@@ -152,6 +152,6 @@ $endfor$
 
 \noindent{}$reviewer.title$\vspace{6mm}
 
-\noindent{}$reviewer.name$ $if(signature)$ \hspace{5mm}\includegraphics[width=4cm]{$signature$}\hspace{-45mm}$endif$ \underline{\hspace{5cm}} \hfill $if(date)$$date$$else$<<\underline{\hspace{1cm}}>>\underline{\hspace{3cm}}20\underline{\hspace{0.5cm}}~г.$endif$
+\noindent{}$reviewer.name$ $if(signature)$ \hspace{5mm}\includegraphics[width=4cm]{$if(here)$$here$/$endif$$signature$}\hspace{-45mm}$endif$ \underline{\hspace{5cm}} \hfill $if(date)$$date$$else$<<\underline{\hspace{1cm}}>>\underline{\hspace{3cm}}20\underline{\hspace{0.5cm}}~г.$endif$
 \end{absolutelynopagebreak}
 \end{document}
