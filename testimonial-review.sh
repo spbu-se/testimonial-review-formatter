@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ueo pipefail
 
-here=$(dirname $0)
+here=$(dirname $(realpath $0))
 
 # if your OS is sick
 here=${here//\\/\/}
