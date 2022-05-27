@@ -14,9 +14,12 @@ srcdir="${srcdir//\\/\/}"
 
 tex="${src%.*}.tex"
 txt="${src%.*}.txt"
+pdf="${src%.*}.pdf"
 
 pandoc -t latex -o "$tex" -V here="$here" --template "${here}/templates/testimonial.latex" "$src"
 pandoc -t plain -o "$txt" --template "${here}/templates/testimonial.plain" "$src"
 
-xelatex -output-directory "$srcdir" "$tex"
-xelatex -output-directory "$srcdir" "$tex"
+xelatex -output-directory "$TMPDIR" "$tex"
+xelatex -output-directory "$TMPDIR" "$tex"
+mv "$TMPDIR/$pdf" $srcdir
+rm "$tex"
