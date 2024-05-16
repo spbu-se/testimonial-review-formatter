@@ -19,7 +19,15 @@ pdf="${src%.*}.pdf"
 pandoc -t latex -o "$tex" -V here="$here" --template "${here}/templates/testimonial.latex" "$src"
 pandoc -t plain -o "$txt" --template "${here}/templates/testimonial.plain" "$src"
 
-xelatex -output-directory "$TMPDIR" "$tex"
-xelatex -output-directory "$TMPDIR" "$tex"
-mv "$TMPDIR/$pdf" $srcdir
-rm "$tex"
+if command -v tectonic &> /dev/null; then
+  tectonic "$tex"
+  rm "$tex"
+elif command -v xelatex &> /dev/null; then
+  xelatex -output-directory "$TMPDIR" "$tex"
+  xelatex -output-directory "$TMPDIR" "$tex"
+  mv "$TMPDIR/$pdf" $srcdir
+  rm "$tex"
+else
+  echo "Neither tectonic nor xelatex available" >&2
+  exit 1
+fi
