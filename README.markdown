@@ -21,7 +21,7 @@
 --------------------
 
 * [Pandoc](http://pandoc.org/) — текст пишется с использованием [Pandoc Markdown](http://pandoc.org/README.html#pandocs-markdown)
-* XeLaTeX
+* [Tectonic](https://tectonic-typesetting.github.io/) или любой актуальный XeLaTeX
 * Bash (у кого есть Git, у того найдётся и Bash)
 
 Запуск
